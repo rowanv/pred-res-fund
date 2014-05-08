@@ -196,3 +196,6 @@ confus.rf1
 
 accur.rf1.improv <- confus.rf1$overall[1] - baseline.accur
 accur.rf1.improv
+
+#17.59% improvement over baseline, so slightly better than CART, but a lot slower than CART
+#Let's go with CART and logit for now
