@@ -129,6 +129,7 @@ stat.signif.var
 
 wordcloud1 <- wordcloud(stat.signif.var[,1], stat.signif.var[,3], rot.per = 0.35, use.r.layout=FALSE ,colors = brewer.pal(3, "Oranges"))
 
+#The word cloud is available at http://www.totiusmundi.com/QuantPortfolio/QuantPortfolio.html
 
 #The statistically significant terms for the logit model are:
 #applic, collabor, continu, cours, develop, enabl, human, includ, interdisciplinari,
