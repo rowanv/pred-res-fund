@@ -85,8 +85,50 @@ coef.logit1
 stat.signif <- subset(coef.logit1, coef.logit1[4] <=0.01)
 stat.signif
 
-stat.signif.var <- row.names(stat.signif)
+
+
+#p values and variables that are statistically significant
+stat.signif.var <- data.frame(Variable = row.names(stat.signif), PVal = stat.signif[4], pseudoFreq = as.numeric(c(1:nrow(stat.signif))))
 stat.signif.var
+
+#Let's create a word cloud that shows the terms that are statistically significant
+#for the logit model
+
+#Changing P-Values to pseudo-frequencies for word cloud
+#pval <0.0001, freq = 15
+#pval <0.001, freq = 10
+#pval <0.01, freq = 5
+
+#Remove the (Intercept) var
+stat.signif.var <- stat.signif.var[2:nrow(stat.signif),]
+
+pseudo.freq <- function(stat.signif.var){
+	var.name <- stat.signif.var[1]
+	pval <- stat.signif.var[2]
+	ps.freq <- stat.signif.var[3]
+	
+
+	for(i in 1:nrow(stat.signif.var)){
+		if(pval[i,] <= 0.0001){
+			ps.freq[i,] <- 15
+		}
+		else if (pval[i,] <= 0.001){
+			ps.freq[i,] <- 10
+		}
+		else if (pval[i,] <= 0.01){
+			ps.freq[i,] <- 5
+		}
+		
+	}
+	stat.signif.var[3] <- ps.freq
+	return(stat.signif.var)
+}
+
+stat.signif.var <- pseudo.freq(stat.signif.var)
+stat.signif.var
+
+wordcloud1 <- wordcloud(stat.signif.var[,1], stat.signif.var[,3], rot.per = 0.35, use.r.layout=FALSE ,colors = brewer.pal(3, "Oranges"))
+
 
 #The statistically significant terms for the logit model are:
 #applic, collabor, continu, cours, develop, enabl, human, includ, interdisciplinari,
