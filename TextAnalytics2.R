@@ -5,7 +5,7 @@
 
 #Part 2 - Cross Validation
 
-#The dataset utilized for these visualizations is available at the following URL:
+#The dataset utilized for this analysis is available at the following URL:
 #http://www.research.gov/research-portal/appmanager/base/desktop?_nfpb=true&_eventName=viewQuickSearchFormEvent_so_rsr
 
 
