@@ -14,7 +14,10 @@ TextAnalytics3: I previously looked at Research Projects for 2013. I repeat the 
 for 2011 and 2012. I aim to determine whether the types of research most likely to receive higher levels of funding changes over the years.
 
 Word Clouds generated in the TextAnalytics3 file:
-
+2011 Data:
 ![wordcloud2011](/Images/wordcloud2011.jpg)
+2012 Data:
 ![wordcloud2012](/Images/wordcloud2012.jpg)
+2013 Data:
 ![wordcloud2013](/Images/wordcloud2013.jpg)
+*darker colours = smaller p-value. 
