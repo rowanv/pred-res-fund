@@ -1,4 +1,4 @@
-#Rowan Vasquez
+#Rowan
 
 #Linear Regression Analysis of Research Spending & Results Dataset
 
